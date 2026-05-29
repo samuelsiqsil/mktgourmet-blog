@@ -89,7 +89,7 @@ export default async function BlogPage({
       {/* Search e navegação */}
       <div className="flex relative flex-col lg:flex-row lg:items-center justify-between gap-6 mb-16 mt-12">
 
-        <div className="flex flex-wrap gap-4 justify-center lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+        <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href={
               search
@@ -124,7 +124,7 @@ export default async function BlogPage({
 
         <form
           action="/"
-          className="flex w-full lg:w-[320px] rounded-full border border-[#17B75247] px-4 py-3 lg:absolute lg:right-10"
+          className="flex w-full lg:w-[420px] rounded-full border border-[#17B75247] px-4 py-3"
         >
           {selectedCategory && (
             <input
