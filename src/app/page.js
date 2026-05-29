@@ -72,7 +72,7 @@ export default async function BlogPage({
 
       {/* Título */}
       <h1 className="text-4xl sm:text-5xl font-bold mb-3 mx-auto w-fit text-center leading-tight">
-        Título do Blog
+        Marketing Gourmet: Estratégias para Restaurantes Venderem Mais
       </h1>
 
       <p className="mx-auto max-w-2xl text-center text-base sm:text-lg lg:text-2xl text-[#D1D5DB] leading-relaxed">
