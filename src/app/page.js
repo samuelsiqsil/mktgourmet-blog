@@ -76,15 +76,11 @@ export default async function BlogPage({
       </h1>
 
       <p className="mx-auto max-w-2xl text-center text-base sm:text-lg lg:text-2xl text-[#D1D5DB] leading-relaxed">
-        Subtítulo do{' '}
-        <span className="text-[#4ADE80] font-bold">
-          blog
-        </span>{' '}
-        com uma quantidade razoável de{' '}
-        <span className="text-[#4ADE80] font-bold">
-          texto
-        </span>
-      </p>
+  Como lotar seu restaurante com{' '}
+  <span className="text-[#4ADE80] font-bold">
+    marketing digital
+  </span>
+</p>
 
       {/* Search e navegação */}
       <div className="flex relative flex-col lg:flex-row lg:items-center justify-between gap-6 mb-16 mt-12">
