@@ -432,7 +432,7 @@ export default async function BlogPage({
                         }
                       </h2>
 
-                      <p className="pb-4 text-[#D1D5DB] text-sm leading-relaxed lg:h-20">
+                      <p className="pb-4 text-[#D1D5DB] text-sm leading-relaxed">
                         {
                           post.frontmatter
                             .description
