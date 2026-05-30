@@ -161,7 +161,7 @@ export default async function BlogPage({
                       .frontmatter.title
                   }
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
 
@@ -226,7 +226,7 @@ export default async function BlogPage({
                       src={post.frontmatter.cover}
                       alt={post.frontmatter.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#12181F] to-black/30" />
@@ -306,7 +306,7 @@ export default async function BlogPage({
                         }
                         width={800}
                         height={500}
-                        className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-[220px] sm:h-[260px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
 
                       <div className="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:opacity-20" />
@@ -415,7 +415,7 @@ export default async function BlogPage({
                         }
                         width={800}
                         height={500}
-                        className="w-full h-[220px] object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-[220px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
 
                       <div className="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:opacity-20" />
