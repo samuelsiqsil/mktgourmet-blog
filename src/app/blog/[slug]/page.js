@@ -96,10 +96,39 @@ export default async function PostPage({
         new Date(a.frontmatter.date)
     )
 
-    
+    const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.frontmatter.title,
+  description: post.frontmatter.description,
+  image: post.frontmatter.cover,
+  datePublished: post.frontmatter.date,
+  author: {
+    '@type': 'Organization',
+    name: 'Marketing Gourmet',
+    url: 'https://marketinggourmet.com.br',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Marketing Gourmet',
+    url: 'https://marketinggourmet.com.br',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://marketinggourmet.com.br/logo.png',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://blog.marketinggourmet.com.br/blog/${slug}`,
+  },
+}
   return (
     // Título imagem e conteúdo
     <main className="max-w-[1368px] mx-auto py-20 px-5">
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-5xl pb-15 mx-auto w-fit">
           {post.frontmatter.title}
