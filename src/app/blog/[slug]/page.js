@@ -9,23 +9,56 @@ const inter = Inter({
 })
 
 // METADATA DINÂMICO
-export async function generateMetadata({
-  params,
-}) {
+export async function generateMetadata({ params }) {
   const { slug } = await params
-
   const post = getPostBySlug(slug)
 
-  return {
-    title: "Blog - "+post.frontmatter.title,
-    description:
-      post.frontmatter.description,
+  const title = post.frontmatter.title
+  const description = post.frontmatter.description
+  const cover = post.frontmatter.cover
 
+  return {
+    title: title,
+    description: description,
+    keywords: [
+      'marketing digital para restaurantes',
+      'como aumentar vendas do restaurante',
+      'como atrair clientes para restaurante',
+      'marketing para restaurante',
+      'agência de marketing para restaurantes',
+      'marketing gourmet',
+      'agência de marketing para restaurantes brasília',
+      'como vender mais no restaurante',
+      'aumentar vendas no iFood',
+      'google meu negócio restaurante',
+    ],
+    authors: [{ name: 'Marketing Gourmet', url: 'https://marketinggourmet.com.br' }],
+    creator: 'Marketing Gourmet',
+    publisher: 'Marketing Gourmet',
+    alternates: {
+      canonical: `https://blog.marketinggourmet.com.br/blog/${slug}`,
+    },
     openGraph: {
-      title: post.frontmatter.title,
-      description:
-        post.frontmatter.description,
-      images: [post.frontmatter.cover],
+      title: title,
+      description: description,
+      url: `https://blog.marketinggourmet.com.br/blog/${slug}`,
+      siteName: 'Blog Marketing Gourmet',
+      images: [
+        {
+          url: cover,
+          width: 1400,
+          height: 700,
+          alt: title,
+        },
+      ],
+      locale: 'pt_BR',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [cover],
     },
   }
 }
