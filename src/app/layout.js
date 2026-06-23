@@ -1,5 +1,6 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import Link from "next/link";
+import Image from 'next/image'
 import "./globals.css";
 
 const inter = Inter({
@@ -136,47 +137,60 @@ export default function RootLayout({ children }) {
           {children}
         </main>
 
-        <footer className="flex flex-col sm:flex-row items-center w-fit mx-auto py-13 text-gray-400 gap-3 text-center px-4">
-          <div>
-            © 2025 Marketing Gourmet. Todos os direitos reservados.
-          </div>
+        <footer className="flex flex-col items-center w-fit mx-auto py-13 text-gray-400 gap-3 text-center px-4">
 
-          <a
-            href="https://www.instagram.com/mkt_gourmet/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+
+          <div className="flex items-center gap-3">
+            <div>
+              © 2025 Marketing Gourmet. Todos os direitos reservados.
+            </div>
+
+            <a
+              href="https://www.instagram.com/mkt_gourmet/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors duration-300"
+              aria-label="instagram"
             >
-              <rect
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                x="2"
-                y="2"
-                rx="5"
-                ry="5"
-              ></rect>
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect
+                  width="20"
+                  height="20"
+                  x="2"
+                  y="2"
+                  rx="5"
+                  ry="5"
+                ></rect>
 
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
 
-              <line
-                x1="17.5"
-                x2="17.51"
-                y1="6.5"
-                y2="6.5"
-              ></line>
-            </svg>
-          </a>
+                <line
+                  x1="17.5"
+                  x2="17.51"
+                  y1="6.5"
+                  y2="6.5"
+                ></line>
+              </svg>
+            </a>
+          </div>
+
+
+            <div className="flex gap-3 items-center">
+              <p>Desenvolvido por</p>
+              <a href="https://ateliepixel.com/">
+                <Image src={'/logo-atelie.webp'} width={20} height={20} alt="Atelie Pixel"/>
+              </a>
+            </div>
         </footer>
       </body>
     </html>

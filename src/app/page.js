@@ -340,7 +340,7 @@ export default async function BlogPage({
                       </div>
 
                       <div className="flex pt-5 text-sm items-center justify-between">
-                        <p className="text-gray-600 text-sm pt-[6px]">
+                        <p className="text-gray-400 text-sm pt-[6px]">
                           {
                             post.frontmatter.date
                           }
