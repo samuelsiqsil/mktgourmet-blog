@@ -12,9 +12,41 @@ const PlayfairDisplay = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Blog - Marketing Gourmet",
-  description: "Descrição da página",
-};
+  title: {
+    default: 'Blog Marketing Gourmet: Marketing Digital para Restaurantes',
+    template: '%s | Marketing Gourmet',
+  },
+  description: 'Estratégias de marketing digital para restaurantes: Google Meu Negócio, Instagram, iFood, anúncios patrocinados e como aparecer no ChatGPT.',
+  metadataBase: new URL('https://blog.marketinggourmet.com.br'),
+  openGraph: {
+    siteName: 'Marketing Gourmet',
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+}
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Marketing Gourmet',
+  url: 'https://marketinggourmet.com.br',
+  logo: 'https://marketinggourmet.com.br/logo.png',
+  description: 'Agência de marketing digital especializada em restaurantes em Brasília. Ajudamos restaurantes a aumentar vendas com Google Meu Negócio, Instagram, iFood e anúncios patrocinados.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Brasília',
+    addressRegion: 'DF',
+    addressCountry: 'BR',
+  },
+  sameAs: [
+    'https://www.instagram.com/mkt_gourmet/',
+    'https://blog.marketinggourmet.com.br',
+  ],
+}
 
 function MobileMenu() {
   return (
@@ -92,6 +124,10 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-black text-white">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+/>
         <header className="fixed top-0 left-0 right-0 z-20 border-b bg-black/96 border-[#1f2937] py-1 font-[16px]">
           <div className="max-w-[1368px] mx-auto h-16 px-4 flex items-center justify-between">
             <div></div>
